@@ -104,13 +104,18 @@
   position: relative;
 }
 
+.lmo-navbar__btn.has-badge .badge.notifications__activity {
+  background: #d8321f;
+}
+
 .lmo-navbar__btn.has-badge .badge {
   font-size: 10px;
   position: absolute;
   left: 16px;
-  top: 1px;
+  top: 2px;
   background: #4A90E2;
   border-radius: 10px;
+  border: 2px solid white;
   padding: 5px;
   color: white;
   line-height: 5px;

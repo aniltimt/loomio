@@ -560,6 +560,7 @@ ActiveRecord::Schema.define(version: 20151210000108) do
     t.integer  "votes_count",         default: 0,    null: false
     t.integer  "outcome_author_id"
     t.string   "key"
+    t.integer  "members_not_voted_count",             default: 0,    null: false
   end
 
   add_index "motions", ["author_id"], name: "index_motions_on_author_id", using: :btree

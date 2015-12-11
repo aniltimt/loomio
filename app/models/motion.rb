@@ -190,10 +190,6 @@ class Motion < ActiveRecord::Base
     end
   end
 
-  def members_not_voted_count
-    members_not_voted.count
-  end
-
   def percent_voted
     if group_size_when_voting == 0
       0

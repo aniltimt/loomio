@@ -1,0 +1,20 @@
+---
+gl:
+  email:
+    by_who: por %{person}
+    reply_to_this_discussion: Respostar a este debate
+    to_join_discussion:
+      message_intro: "%{who} dixo:"
+      link: Unirse ó debate
+    view_discussion: Preme aquí para este debate
+    daily_activity:
+      subject: Loomio - Resumo das últimas 24 horas
+    proposal_closing_soon:
+      summary: Resumo
+    thread_mailer:
+      change_preferences: 'Cambiar as preferencias de correo:'
+      new_motion: "%{who} propuxo:"
+      motion_closing_soon: 'Propostas que vencen en 24 horas:'
+      proposal_closed: 'Propostas pechadas:'
+      outcome_created: "%{who} propuxo dar por feita a proposta:"
+      you_agreed: Ti %{past_tense_position}

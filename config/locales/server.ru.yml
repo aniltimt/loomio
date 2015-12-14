@@ -1,0 +1,51 @@
+---
+ru:
+  email:
+    to_join_discussion:
+      message_intro: "%{who} сказал(а):"
+    missed_yesterday:
+      subject: "Вчера на Loomio"
+      mark_as_read: "Отметить прочитанным"
+    group_membership_approved:
+      subject: "Участие подтверждено. "
+    invitation:
+      hi: "Здравствуйте, %{name},"
+    proposal_outcome:
+      subject: "Результат голосования"
+    thread_mailer:
+      change_preferences: "Измените настройки уведомлений:"
+      new_motion: "%{who} предложил:"
+      motion_closing_soon: "Предложение закроется через 24 часа:"
+      proposal_closed: "Предложение закрыто"
+      outcome_created: "%{who} подвел итоги:"
+      you_agreed: "Вы %{past_tense_position}"
+  devise:
+    invitations:
+      send_instructions: "Приглашение было выслано на %{email}."
+      invitation_token_invalid: "Срок приглашения вышел!"
+      updated: "Учетная запись создана."
+      no_invitations_remaining: "У вас нет пришлашений"
+    mailer:
+      invitation_instructions:
+        subject: "Кто-то пригласил вас вступить в группу"
+    registrations:
+      sign_up: "Создать учетную запись"
+  footer:
+    about: "О нас"
+    blog: "Блог"
+    contact: "Контакты"
+    help: "Помощь"
+    privacy: "Конфиденциальность"
+    pricing: "Цены"
+    public_groups: "Общедоступные группы"
+    terms: "Условия"
+    independent_install_html: '%{hostname} работает с независимой копией Loomio: <a
+      href="http://github.com/loomio/loomio">разузнать побольше</a>.'
+  start_group_form:
+    header: "Создайте новую группу"
+    name: "Ваше имя"
+    group_name: "Название группы"
+    success:
+      header: "Почти готово! Проверьте почту."
+  pricing_page:
+    header: "Цены"

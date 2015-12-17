@@ -62,7 +62,7 @@ describe 'DiscussionModel', ->
     it "it does not lower the last read sequenceId", ->
       discussion.lastReadSequenceId = 1
       discussion.markAsRead(0)
-      expect(discussion.lastReadSequenceId).toBe(1)
+      expect(recordStore.discussions.find(discussion.id).lastReadSequenceId).toBe(1)
 
   describe 'clone()', ->
     it 'copies all of the attributes of the object being cloned', ->

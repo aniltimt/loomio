@@ -13,3 +13,8 @@ describe 'Inbox Page', ->
 
     expect(inboxHelper.anyThreads()).not.toContain('Muted discussion')
     expect(inboxHelper.anyThreads()).not.toContain('Old discussion')
+
+  it 'can mark all threads in a group as read', ->
+    expect(inboxHelper.firstGroup()).toContain('Dirty Dancing Shoes')
+    inboxHelper.clickMarkAsRead()
+    expect(inboxHelper.firstGroup()).not.toContain('Dirty Dancing Shoes')

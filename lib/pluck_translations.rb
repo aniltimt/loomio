@@ -15,6 +15,9 @@ module LoomioI18n
 
     locales_with_filenames(en_source_filename,
                            en_destination_filename) do |locale, source_filename, destination_filename|
+
+      subject = YAML.load_file(source_filename)[locale][source_key]
+
       # next unless the source file exists, and it has the key
       if File.exists?(destination_filename)
         destination = YAML.load_file(destination_filename)
@@ -22,13 +25,23 @@ module LoomioI18n
         destination = {}
       end
 
-      subject = YAML.load_file(source_filename)[locale][source_key]
-      if destination.has_key? locale
-        destination[locale].merge!({destination_key => subject})
-      else
-        destination[locale] = {destination_key => subject}
-      end
+      path_in_hash("#{locale}.#{destination_key}", destination).merge!(subject)
+
       File.open(destination_filename, 'w') {|f| f.write destination.to_yaml }
+    end
+  end
+
+  # give us the value at en.bar.foo
+  # if foo does not exist, create a hash and return it
+  def self.path_in_hash(path, hash)
+    path.split('.').inject(hash) do |location, key|
+      raise "location should always be a hash" unless location.is_a? Hash
+
+      if location.has_key?(key)
+        location[key]
+      else
+        location[key] = {}
+      end
     end
   end
 
